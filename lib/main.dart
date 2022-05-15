@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:riverpod_practice/01_provider.dart';
 
 class MyValue {
   MyValue(this.value);
@@ -31,7 +32,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         primarySwatch: Colors.blue,
       ),
-      home: const Text('Riverpod'),
+      home: const ProviderPage(),
     );
   }
 }
