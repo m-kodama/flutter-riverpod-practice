@@ -1,7 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+class MyValue {
+  MyValue(this.value);
+  final int value;
+}
+
+// Providerの宣言
+// ref を使うと他のProviderを読み取ることが可能
+final myProvider = Provider((ref) => MyValue(0));
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    // ProviderScopeで囲んだ範囲でProviderが有効になる
+    const ProviderScope(
+      child: MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
