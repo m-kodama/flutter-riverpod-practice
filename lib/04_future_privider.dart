@@ -6,13 +6,13 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 /// FutureProvider = Provider + FutureBuilder
 /// 単一のFutureな値を公開できるProvider
 
-final dummyAsyncFuncProvider = FutureProvider((ref) async {
+final dummyAsyncFuncProvider = FutureProvider<int>((ref) async {
   final value1 = await dummyAsyncFunc(1);
   final value2 = await dummyAsyncFunc(2);
   return value1 + value2;
 });
 
-dummyAsyncFunc(int value) async {
+Future<int> dummyAsyncFunc(int value) async {
   await Future.delayed(Duration(seconds: value));
   return value * value;
 }
