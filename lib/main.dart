@@ -7,6 +7,7 @@ import 'package:riverpod_practice/04_future_privider.dart';
 import 'package:riverpod_practice/05_stream_provider.dart';
 import 'package:riverpod_practice/06_change_notifier_provider.dart';
 import 'package:riverpod_practice/07_consumer.dart';
+import 'package:riverpod_practice/08_select.dart';
 
 class MyValue {
   MyValue(this.value);
@@ -38,7 +39,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         primarySwatch: Colors.blue,
       ),
-      home: const ConsumerPage(),
+      home: const SelectPage(),
     );
   }
 }
